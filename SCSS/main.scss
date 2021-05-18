@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,900;1,400&display=swap");
+
+@mixin flexProp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border {
+    border: 1px solid black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#Home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 30px 50px;
+    .redPad {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25vw;
+        height: 100vh;
+        background-color: #bc1823;
+        z-index: -99;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: #efefef;
+        z-index: 1;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+        .logoContainer {
+            font-family: Poppins;
+            padding: 0px 20px;
+            color: #bc1823;
+            font-size: 20px;
+        }
+        ul {
+            display: flex;
+            padding: 0px 10px;
+            li {
+                .active {
+                    background-color: #bc1823;
+                    color: #fff;
+                    font-weight: 650;
+                }
+                a {
+                    padding: 10px 15px;
+                    font-size: 16px;
+                    font-family: calibri;
+                    margin: 0px 2px;
+                    color: #000;
+                    font-weight: 600;
+                }
+                a:hover {
+                    color: #fff;
+                    background-color: #bc1823 !important;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+    .homeCase {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-40%);
+        .caption {
+            display: flex;
+            flex-direction: column;
+
+            .sunContainer {
+                margin-bottom: 30px;
+            }
+            .showText {
+                font-family: Poppins;
+                font-size: 70px;
+                font-weight: 600;
+                margin: 0;
+                padding: 0;
+                line-height: 65px;
+                .showMainText {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .describeHome {
+                font-size: 1.5rem;
+                margin: 15px 0px;
+                font-weight: 100;
+                color: rgb(75, 73, 73);
+            }
+            #viewMoreId {
+                background-color: #bc1823;
+                padding: 15px 40px;
+                border: none;
+                border-radius: 30px;
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                margin-right: 180px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+            #viewMoreId:hover {
+                background-color: red;
+                transition: all 0.3s ease;
+            }
+        }
+        .model_image {
+            height: 400px;
+            width: 400px;
+            background-color: dimgrey;
+            clip-path: circle(200px);
+            img {
+                clip-path: circle(197px);
+                object-fit: fill;
+            }
+        }
+    }
+}
