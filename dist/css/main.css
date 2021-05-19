@@ -12,6 +12,7 @@ ul {
   list-style: none;
 }
 
+/* Home Section */
 #Home {
   position: relative;
   width: 100%;
@@ -19,6 +20,9 @@ ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 30px 50px;
+  /* Right Red Box Design */
+  /* Nav Bar Design */
+  /* Home Section Description with Model Image */
 }
 
 #Home .redPad {
@@ -53,6 +57,7 @@ ul {
   z-index: 1;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+  /* Name Of Page */
 }
 
 #Home nav .logoContainer {
@@ -104,6 +109,7 @@ ul {
   top: 50%;
   -webkit-transform: translateY(-40%);
           transform: translateY(-40%);
+  /* Image with Round Container */
 }
 
 #Home .homeCase .caption {
@@ -114,6 +120,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* Button Design */
 }
 
 #Home .homeCase .caption .sunContainer {
@@ -149,9 +156,8 @@ ul {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  margin-right: 180px;
-  margin-top: 20px;
   cursor: pointer;
+  margin: 20px 200px 0px 0px;
 }
 
 #Home .homeCase .caption #viewMoreId:hover {
@@ -163,15 +169,93 @@ ul {
 #Home .homeCase .model_image {
   height: 400px;
   width: 400px;
-  background-color: dimgrey;
+  background-color: #000000;
   -webkit-clip-path: circle(200px);
           clip-path: circle(200px);
 }
 
 #Home .homeCase .model_image img {
+  height: 400px;
+  width: 400px;
   -webkit-clip-path: circle(197px);
           clip-path: circle(197px);
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+/* About Section Design */
+#About {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 50px;
+}
+
+#About .imageContainer {
+  width: 550px;
+  height: 450px;
+}
+
+#About .imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+#About .aboutDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+#About .aboutDesc .title {
+  font-family: Poppins;
+  font-size: 45px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#About .aboutDesc .description {
+  font-size: 30px;
+  font-family: calibri;
+  padding: 10px 0px;
+  margin: 0px;
+  color: #111111;
+}
+
+#About .aboutDesc #learnMoreId {
+  background-color: #bc1823;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin: 40px 60% 0px 0px;
+}
+
+#About .aboutDesc #learnMoreId:hover {
+  background-color: red;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 /*# sourceMappingURL=main.css.map */
