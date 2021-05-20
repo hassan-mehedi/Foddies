@@ -21,9 +21,39 @@
     cursor: pointer;
 }
 
+@mixin page-slide-up {
+    animation: fade-in 1.5s ease, slide-up 1.5s ease-in-out;
+    -webkit-animation: fade-in 1.5s ease, slide-up 1.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(250px);
+    }
+    100% {
+        top: 30;
+    }
+}
+
+@keyframes up-to-down {
+    100% {
+        transform: translateY(100%);
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
+    background-color: #efefef;
 }
 
 a {
@@ -45,7 +75,7 @@ ul {
 
     /* Right Red Box Design */
 
-    .redPad {
+    .right-red-box {
         position: absolute;
         top: 0;
         right: 0;
@@ -83,6 +113,7 @@ ul {
         ul {
             display: flex;
             padding: 0px 10px;
+
             li {
                 .active {
                     background-color: #bc1823;
@@ -109,6 +140,7 @@ ul {
     /* Home Section Description with Model Image */
 
     .homeCase {
+        @include page-slide-up();
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -205,7 +237,7 @@ ul {
             font-family: calibri;
             padding: 10px 0px;
             margin: 0px;
-            color: #111111;
+            color: #4b4949;
         }
         #learnMoreId {
             @include bigButton;
@@ -215,5 +247,113 @@ ul {
             background-color: red;
             transition: all 0.3s ease;
         }
+    }
+}
+
+/* Products Section */
+
+#Products {
+    width: 100%;
+    height: 100vh;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    .textContainer {
+        .title {
+            font-family: Poppins;
+            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .description {
+            font-size: 30px;
+            font-family: calibri;
+            padding: 0;
+            margin: 0;
+            color: #4b4949;
+        }
+    }
+    .productImageContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        .imageBox {
+            position: relative;
+            top: 10%;
+            width: 300px;
+            height: 350px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.3);
+            transform: translate(0px, 30px);
+            transition: all 0.5s ease;
+            .heart-shape {
+                position: absolute;
+                top: 25px;
+                left: 25px;
+                height: 32px;
+                width: 32px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            img {
+                width: 100%;
+                height: 75%;
+                object-fit: fill;
+            }
+            .afterImage {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .imageName {
+                    margin: 0px 0px 15px 0px;
+                    padding: 0px;
+                    font-family: Poppins;
+                    font-size: 18px;
+                }
+                .downArrow {
+                    box-sizing: border-box;
+                    width: 16px;
+                    height: 8px;
+                    background-color: black;
+                    clip-path: polygon(
+                        0% 0%,
+                        50% 100%,
+                        100% 0%,
+                        80% 0%,
+                        50% 80%,
+                        20% 0%
+                    );
+                }
+            }
+        }
+        .imageBox:hover {
+            transform: translate(0px, -30px);
+            transition: transform 0.5s ease;
+
+            .downArrow {
+                animation: up-to-down 0.3s ease-in-out forwards infinite
+                    alternate;
+            }
+        }
+    }
+    .bottom-red-box {
+        background-color: #bc1823;
+        height: 35vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -99;
     }
 }
