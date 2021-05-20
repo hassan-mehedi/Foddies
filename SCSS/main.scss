@@ -285,6 +285,7 @@ ul {
         align-items: center;
         justify-content: space-evenly;
         .imageBox {
+            cursor: pointer;
             position: relative;
             top: 10%;
             width: 300px;
@@ -355,5 +356,137 @@ ul {
         bottom: 0;
         left: 0;
         z-index: -99;
+    }
+}
+
+/* Chef Section */
+
+#Chefs {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+    .headerTitle {
+        font-family: Poppins;
+        font-size: 45px;
+        color: #fff;
+        padding-top: 40px;
+    }
+    .upper-red-box {
+        background-color: #bc1823;
+        height: 45vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -99;
+    }
+    .cardContainer {
+        padding-top: 5%;
+        display: flex;
+        align-items: center;
+        .card {
+            margin: 0px 20px;
+            display: flex;
+            height: 400px;
+            width: 400px;
+            flex-direction: column;
+            align-items: center;
+            .chefImage {
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+                img {
+                    margin: 0;
+                    padding: 0;
+                    width: 150px;
+                    height: 150px;
+                    clip-path: circle(75px);
+                    object-fit: cover;
+                }
+            }
+            .info {
+                text-align: center;
+                .title {
+                    font-family: Poppins;
+                    font-size: 30px;
+                }
+                .description {
+                    font-family: calibri;
+                    font-size: 20px;
+                    color: #4b4949;
+                }
+            }
+        }
+    }
+}
+
+/* Contact Design */
+
+#Contact {
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px 50px;
+    width: 100%;
+    height: 100vh;
+    .left-red-box {
+        background-color: #bc1823;
+        height: 100%;
+        width: 30vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -99;
+    }
+    .contact-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-58%, -40%);
+        width: 1000px;
+        .imageContainer {
+            img {
+                height: 400px;
+                width: 400px;
+                clip-path: circle(200px);
+                object-fit: cover;
+            }
+        }
+        .contact-detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-family: Poppins;
+                font-size: 45px;
+            }
+            h3 {
+                font-family: calibri;
+                margin: 0px;
+                padding: 0px;
+                font-size: 30px;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.904);
+            }
+            p {
+                font-family: sans-serif;
+                font-size: 20px;
+                margin: 5px 0px 20px 0px;
+                color: #4b4949;
+            }
+            button {
+                @include bigButton();
+            }
+        }
     }
 }
