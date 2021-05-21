@@ -10,6 +10,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
     </head>
     <body>
         <!-- Home with Navbar -->
@@ -206,7 +207,50 @@
                     <p>XYZ Anywhere, ABC City</p>
                     <h3>Phone Number</h3>
                     <p>+88016-744-20-630</p>
-                    <button>Get in touch with us</button>
+                    <a href="#contact-form"
+                        ><button id="get-in-touch">
+                            Get in touch with us
+                        </button></a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-form">
+            <h1>E-mail us</h1>
+            <form action="">
+                <div class="name-email">
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Your Name (required)"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Your E-mail (required)"
+                        required
+                    />
+                </div>
+                <div class="visitorMessage">
+                    <input
+                        type="text"
+                        name="message"
+                        id="message"
+                        placeholder="Your Message"
+                    />
+                </div>
+                <input type="button" value="Get in touch" id="submit-btn" />
+            </form>
+            <div class="red-footer">
+                <div class="copyright">&COPY;foodies</div>
+                <div class="social">
+                    <img src="/images/facebook.png" alt="" />
+                    <img src="/images/twitter.png" alt="" />
+                    <img src="/images/instagram.png" alt="" />
                 </div>
             </div>
         </section>
