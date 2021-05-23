@@ -194,7 +194,14 @@ ul {
 }
 
 #Home .homeCase .caption .sunContainer {
+  width: 7.2rem;
+  height: 7.2rem;
   margin-bottom: 3rem;
+}
+
+#Home .homeCase .caption .sunContainer img {
+  height: 100%;
+  width: 100%;
 }
 
 #Home .homeCase .caption .showText {
@@ -629,8 +636,8 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-56%, -40%);
-          transform: translate(-56%, -40%);
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
   width: 70%;
 }
 
@@ -905,6 +912,9 @@ ul {
 
 /* Media Query */
 @media (max-width: 1175px) {
+  #About {
+    padding-top: 10rem;
+  }
   #contact-form form {
     height: 50%;
   }
@@ -912,9 +922,34 @@ ul {
     width: 95%;
     margin: 1% 2%;
   }
+  #Products {
+    height: 100vh;
+  }
+  #Products .productImageContainer .imageBox {
+    width: 25rem;
+    height: 30rem;
+    top: 15%;
+  }
+  #Products .productImageContainer .imageBox:hover {
+    -webkit-transform: translate(0rem, -1.5rem);
+            transform: translate(0rem, -1.5rem);
+  }
+  #Products .bottom-red-box {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    background-color: #bc1823;
+    z-index: -99;
+  }
+  #Chefs {
+    height: auto;
+  }
+  #Chefs .cardContainer {
+    padding-top: 2%;
+  }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1110px) {
   #About .imageContainer {
     width: 45rem;
     height: 35rem;
@@ -937,33 +972,70 @@ ul {
   #Products .bottom-red-box {
     position: absolute;
     width: 100%;
-    height: 25vh;
+    height: 30vh;
     background-color: #bc1823;
     z-index: -99;
   }
   #Chefs .headerTitle {
     font-size: 4rem;
-    margin-top: 10rem;
-    margin-bottom: 0rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
     padding: 0rem;
   }
   #Chefs .upper-red-box {
     position: absolute;
     width: 100%;
-    height: 25vh;
+    height: 35vh;
     background-color: #bc1823;
     z-index: -99;
-    border-top: 0.2rem solid #efefef;
   }
   #Chefs .cardContainer {
-    padding-top: 10%;
+    padding-top: 0%;
     margin-bottom: 5rem;
+  }
+  #Chefs .cardContainer .card .chefImage {
+    width: 10rem;
+    height: 10rem;
+  }
+  #Chefs .cardContainer .card .chefImage img {
+    width: 10rem;
+    height: 10rem;
+    -webkit-clip-path: circle(5rem);
+            clip-path: circle(5rem);
   }
 }
 
 @media (max-width: 900px) {
+  #Home .homeCase .caption .sunContainer {
+    height: 5rem;
+    width: 5rem;
+  }
+  #Home .homeCase .caption .showText {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  #Home .homeCase .caption .describeHome {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  #Home .homeCase .caption #viewMoreId {
+    margin: 2rem 15rem 0rem 0rem;
+  }
+  #Home .homeCase .model_image {
+    margin-left: 7rem;
+    height: 30rem;
+    width: 30rem;
+    -webkit-clip-path: circle(15rem);
+            clip-path: circle(15rem);
+  }
+  #Home .homeCase .model_image img {
+    height: 30rem;
+    width: 30rem;
+    -webkit-clip-path: circle(14.7rem);
+            clip-path: circle(14.7rem);
+  }
   #About {
-    height: auto;
+    height: 100vh;
     width: 100%;
   }
   #About .imageContainer {
@@ -980,6 +1052,7 @@ ul {
   }
   #About .aboutDesc .description {
     font-size: 2rem;
+    font-weight: 500;
   }
   #About .aboutDesc #learnMoreId {
     font-size: 1.8rem;
@@ -987,7 +1060,7 @@ ul {
     margin: 1rem 20rem 0rem 0rem;
   }
   #Products {
-    height: auto;
+    height: 100vh;
     width: 100%;
   }
   #Products .productImageContainer {
@@ -1022,7 +1095,8 @@ ul {
     width: 100%;
   }
   #Chefs .headerTitle {
-    padding: 2rem;
+    padding: 0;
+    margin-top: 5rem;
   }
   #Chefs .upper-red-box {
     position: absolute;
@@ -1049,6 +1123,25 @@ ul {
   }
   #Chefs .cardContainer .card {
     margin-top: 2rem;
+  }
+  #Contact .contact-container .imageContainer {
+    padding-left: 3rem;
+  }
+  #Contact .contact-container .imageContainer img {
+    height: 30rem;
+    width: 30rem;
+    -webkit-clip-path: circle(15rem);
+            clip-path: circle(15rem);
+  }
+  #Contact .contact-container .contact-detail h1 {
+    font-size: 3.5rem;
+  }
+  #Contact .contact-container .contact-detail h3 {
+    font-size: 2rem;
+  }
+  #Contact .contact-container .contact-detail p {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 }
 /*# sourceMappingURL=main.css.map */

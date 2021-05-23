@@ -164,7 +164,13 @@ ul {
             flex-direction: column;
 
             .sunContainer {
+                width: 7.2rem;
+                height: 7.2rem;
                 margin-bottom: 3rem;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
             }
             .showText {
                 font-family: Poppins;
@@ -413,7 +419,7 @@ ul {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-56%, -40%);
+        transform: translate(-60%, -50%);
         width: 70%;
         .imageContainer {
             img {
@@ -570,6 +576,10 @@ ul {
 /* Media Query */
 
 @media (max-width: 1175px) {
+    #About {
+        padding-top: 10rem;
+    }
+
     #contact-form {
         form {
             height: 50%;
@@ -581,9 +591,33 @@ ul {
             }
         }
     }
+
+    #Products {
+        height: 100vh;
+        .productImageContainer {
+            .imageBox {
+                width: 25rem;
+                height: 30rem;
+                top: 15%;
+            }
+            .imageBox:hover {
+                transform: translate(0rem, -1.5rem);
+            }
+        }
+        .bottom-red-box {
+            @include red-box(25vh, 100%);
+        }
+    }
+
+    #Chefs {
+        height: auto;
+        .cardContainer {
+            padding-top: 2%;
+        }
+    }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1110px) {
     #About {
         .imageContainer {
             width: 45rem;
@@ -611,31 +645,74 @@ ul {
             }
         }
         .bottom-red-box {
-            @include red-box(25vh, 100%);
+            @include red-box(30vh, 100%);
         }
     }
 
     #Chefs {
         .headerTitle {
             font-size: 4rem;
-            margin-top: 10rem;
-            margin-bottom: 0rem;
+            margin-top: 5rem;
+            margin-bottom: 1rem;
             padding: 0rem;
         }
         .upper-red-box {
-            @include red-box(25vh, 100%);
-            border-top: 0.2rem solid #efefef;
+            @include red-box(35vh, 100%);
         }
         .cardContainer {
-            padding-top: 10%;
+            padding-top: 0%;
             margin-bottom: 5rem;
+            .card {
+                .chefImage {
+                    width: 10rem;
+                    height: 10rem;
+                    img {
+                        width: 10rem;
+                        height: 10rem;
+                        clip-path: circle(5rem);
+                    }
+                }
+            }
         }
     }
 }
 
 @media (max-width: 900px) {
+    #Home {
+        .homeCase {
+            .caption {
+                .sunContainer {
+                    height: 5rem;
+                    width: 5rem;
+                }
+                .showText {
+                    font-size: 5rem;
+                    line-height: 5rem;
+                }
+                .describeHome {
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+                #viewMoreId {
+                    margin: 2rem 15rem 0rem 0rem;
+                }
+            }
+            .model_image {
+                margin-left: 7rem;
+                height: 30rem;
+                width: 30rem;
+                clip-path: circle(15rem);
+                img {
+                    height: 30rem;
+                    width: 30rem;
+                    clip-path: circle(14.7rem);
+                }
+            }
+        }
+    }
+
     #About {
-        height: auto;
+        height: 100vh;
         width: 100%;
         .imageContainer {
             width: 30%;
@@ -652,6 +729,7 @@ ul {
             }
             .description {
                 font-size: 2rem;
+                font-weight: 500;
             }
             #learnMoreId {
                 font-size: 1.8rem;
@@ -662,7 +740,7 @@ ul {
     }
 
     #Products {
-        height: auto;
+        height: 100vh;
         width: 100%;
         .productImageContainer {
             @include flexProp(row, center);
@@ -681,7 +759,8 @@ ul {
         height: auto;
         width: 100%;
         .headerTitle {
-            padding: 2rem;
+            padding: 0;
+            margin-top: 5rem;
         }
         .upper-red-box {
             @include red-box(25vh, 100%);
@@ -691,6 +770,31 @@ ul {
             @include flexProp(column, center);
             .card {
                 margin-top: 2rem;
+            }
+        }
+    }
+
+    #Contact {
+        .contact-container {
+            .imageContainer {
+                padding-left: 3rem;
+                img {
+                    height: 30rem;
+                    width: 30rem;
+                    clip-path: circle(15rem);
+                }
+            }
+            .contact-detail {
+                h1 {
+                    font-size: 3.5rem;
+                }
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
             }
         }
     }
