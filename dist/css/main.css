@@ -18,8 +18,8 @@
 
 @-webkit-keyframes slide-up {
   0% {
-    -webkit-transform: translateY(250px);
-            transform: translateY(250px);
+    -webkit-transform: translateY(250rem);
+            transform: translateY(250rem);
   }
   100% {
     top: 30;
@@ -28,8 +28,8 @@
 
 @keyframes slide-up {
   0% {
-    -webkit-transform: translateY(250px);
-            transform: translateY(250px);
+    -webkit-transform: translateY(250rem);
+            transform: translateY(250rem);
   }
   100% {
     top: 30;
@@ -48,6 +48,10 @@
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
   }
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -71,16 +75,16 @@ ul {
   height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 30px 50px;
+  padding: 3rem 5rem;
   /* Right Red Box Design */
   /* Nav Bar Design */
   /* Home Section Description with Model Image */
 }
 
 #Home .right-red-box {
-  position: absolute;
   top: 0;
   right: 0;
+  position: absolute;
   width: 25vw;
   height: 100vh;
   background-color: #bc1823;
@@ -101,29 +105,37 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   background-color: #efefef;
   z-index: 1;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0rem 0rem 1.2rem 0rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0rem 0rem 1.2rem 0rem rgba(0, 0, 0, 0.5);
   /* Name Of Page */
 }
 
 #Home nav .logoContainer {
   font-family: Poppins;
-  padding: 0px 20px;
+  padding: 0rem 2rem;
   color: #bc1823;
-  font-size: 20px;
+  font-size: 2rem;
+}
+
+#Home nav .toggle {
+  display: none;
 }
 
 #Home nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 10px;
+  padding: 0rem 1rem;
 }
 
 #Home nav ul li .active {
@@ -133,10 +145,10 @@ ul {
 }
 
 #Home nav ul li a {
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
   font-family: calibri;
-  margin: 0px 2px;
+  margin: 0rem 0.2rem;
   color: #000;
   font-weight: 600;
 }
@@ -159,6 +171,10 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-40%);
@@ -178,16 +194,16 @@ ul {
 }
 
 #Home .homeCase .caption .sunContainer {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 #Home .homeCase .caption .showText {
   font-family: Poppins;
-  font-size: 70px;
+  font-size: 7rem;
   font-weight: 600;
   margin: 0;
   padding: 0;
-  line-height: 65px;
+  line-height: 6.5rem;
 }
 
 #Home .homeCase .caption .showText .showMainText {
@@ -196,22 +212,22 @@ ul {
 }
 
 #Home .homeCase .caption .describeHome {
-  font-size: 1.5rem;
-  margin: 15px 0px;
+  font-size: 2.5rem;
+  margin: 1.5rem 0rem;
   font-weight: 100;
   color: #4b4949;
 }
 
 #Home .homeCase .caption #viewMoreId {
   background-color: #bc1823;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   border: none;
-  border-radius: 30px;
-  font-size: 18px;
+  border-radius: 3rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  color: #fff;
   cursor: pointer;
-  margin: 20px 200px 0px 0px;
+  margin: 2rem 20rem 0rem 0rem;
 }
 
 #Home .homeCase .caption #viewMoreId:hover {
@@ -221,18 +237,18 @@ ul {
 }
 
 #Home .homeCase .model_image {
-  height: 400px;
-  width: 400px;
+  height: 40rem;
+  width: 40rem;
   background-color: #000000;
-  -webkit-clip-path: circle(200px);
-          clip-path: circle(200px);
+  -webkit-clip-path: circle(20rem);
+          clip-path: circle(20rem);
 }
 
 #Home .homeCase .model_image img {
-  height: 400px;
-  width: 400px;
-  -webkit-clip-path: circle(197px);
-          clip-path: circle(197px);
+  height: 40rem;
+  width: 40rem;
+  -webkit-clip-path: circle(19.7rem);
+          clip-path: circle(19.7rem);
   -o-object-fit: fill;
      object-fit: fill;
 }
@@ -240,71 +256,78 @@ ul {
 /* About Section Design */
 #About {
   position: relative;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 30px 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 #About .imageContainer {
-  width: 550px;
-  height: 450px;
+  width: 55rem;
+  height: 45rem;
 }
 
 #About .imageContainer img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #About .aboutDesc {
+  width: 60rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 600px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
 }
 
 #About .aboutDesc .title {
   font-family: Poppins;
-  font-size: 45px;
-  padding: 0px;
-  margin: 0px;
+  font-size: 4.5rem;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 #About .aboutDesc .description {
-  font-size: 30px;
+  font-size: 3rem;
   font-family: calibri;
-  padding: 10px 0px;
-  margin: 0px;
+  padding: 1rem 0rem;
+  margin: 0rem;
   color: #4b4949;
 }
 
 #About .aboutDesc #learnMoreId {
   background-color: #bc1823;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   border: none;
-  border-radius: 30px;
-  font-size: 18px;
+  border-radius: 3rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  color: #fff;
   cursor: pointer;
-  margin: 40px 60% 0px 0px;
+  margin: 4rem 35rem 0rem 0rem;
 }
 
 #About .aboutDesc #learnMoreId:hover {
@@ -315,9 +338,12 @@ ul {
 
 /* Products Section */
 #Products {
+  position: relative;
   width: 100%;
   height: 100vh;
-  padding: 30px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,21 +357,18 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 #Products .textContainer .title {
   font-family: Poppins;
-  font-size: 45px;
+  font-size: 4.5rem;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
 #Products .textContainer .description {
-  font-size: 30px;
+  font-size: 3rem;
   font-family: calibri;
   padding: 0;
   margin: 0;
@@ -357,40 +380,40 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 #Products .productImageContainer .imageBox {
   cursor: pointer;
   position: relative;
   top: 10%;
-  width: 300px;
-  height: 350px;
+  width: 30rem;
+  height: 35rem;
   background-color: #fff;
-  border-radius: 30px;
-  -webkit-box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.3);
-  -webkit-transform: translate(0px, 30px);
-          transform: translate(0px, 30px);
+  border-radius: 3rem;
+  -webkit-box-shadow: 0.2rem 0.2rem 1.2rem 0.2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0.2rem 0.2rem 1.2rem 0.2rem rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(0rem, 3rem);
+          transform: translate(0rem, 3rem);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 #Products .productImageContainer .imageBox .heart-shape {
   position: absolute;
-  top: 25px;
-  left: 25px;
-  height: 32px;
-  width: 32px;
+  top: 2.5rem;
+  left: 2.5rem;
+  height: 3.2rem;
+  width: 3.2rem;
 }
 
 #Products .productImageContainer .imageBox .heart-shape img {
@@ -409,38 +432,38 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #Products .productImageContainer .imageBox .afterImage .imageName {
-  margin: 0px 0px 15px 0px;
-  padding: 0px;
+  margin: 0rem 0rem 1.5rem 0rem;
+  padding: 0rem;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 #Products .productImageContainer .imageBox .afterImage .downArrow {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 16px;
-  height: 8px;
+  width: 1.6rem;
+  height: 0.8rem;
   background-color: black;
   -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%, 80% 0%, 50% 80%, 20% 0%);
           clip-path: polygon(0% 0%, 50% 100%, 100% 0%, 80% 0%, 50% 80%, 20% 0%);
 }
 
 #Products .productImageContainer .imageBox:hover {
-  -webkit-transform: translate(0px, -30px);
-          transform: translate(0px, -30px);
+  -webkit-transform: translate(0rem, -3rem);
+          transform: translate(0rem, -3rem);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -453,96 +476,104 @@ ul {
 }
 
 #Products .bottom-red-box {
-  background-color: #bc1823;
-  height: 35vh;
-  width: 100%;
   position: absolute;
+  width: 100%;
+  height: 35vh;
+  background-color: #bc1823;
+  z-index: -99;
   bottom: 0;
   left: 0;
-  z-index: -99;
 }
 
 /* Chef Section */
 #Chefs {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: relative;
   width: 100%;
   height: 100vh;
-  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 50px;
-}
-
-#Chefs .headerTitle {
-  font-family: Poppins;
-  font-size: 45px;
-  color: #fff;
-  padding-top: 40px;
-}
-
-#Chefs .upper-red-box {
-  background-color: #bc1823;
-  height: 45vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -99;
-}
-
-#Chefs .cardContainer {
-  padding-top: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#Chefs .cardContainer .card {
-  margin: 0px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 400px;
-  width: 400px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#Chefs .headerTitle {
+  font-family: Poppins;
+  font-size: 4.5rem;
+  color: #fff;
+  padding-top: 4rem;
+}
+
+#Chefs .upper-red-box {
+  position: absolute;
+  width: 100%;
+  height: 45vh;
+  background-color: #bc1823;
+  z-index: -99;
+  top: 0;
+  left: 0;
+}
+
+#Chefs .cardContainer {
+  padding-top: 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#Chefs .cardContainer .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0rem 2rem;
 }
 
 #Chefs .cardContainer .card .chefImage {
-  width: 150px;
-  height: 150px;
+  width: 15rem;
+  height: 15rem;
   border-radius: 100%;
-  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 #Chefs .cardContainer .card .chefImage img {
   margin: 0;
   padding: 0;
-  width: 150px;
-  height: 150px;
-  -webkit-clip-path: circle(75px);
-          clip-path: circle(75px);
+  width: 15rem;
+  height: 15rem;
+  -webkit-clip-path: circle(7.5rem);
+          clip-path: circle(7.5rem);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -553,33 +584,33 @@ ul {
 
 #Chefs .cardContainer .card .info .title {
   font-family: Poppins;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 #Chefs .cardContainer .card .info .description {
   font-family: calibri;
-  font-size: 20px;
+  font-size: 2rem;
   color: #4b4949;
 }
 
 /* Contact Design */
 #Contact {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 30px 50px;
   width: 100%;
   height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem 5rem;
 }
 
 #Contact .left-red-box {
-  background-color: #bc1823;
-  height: 100%;
-  width: 30vw;
   position: absolute;
+  width: 30vw;
+  height: 100%;
+  background-color: #bc1823;
+  z-index: -99;
   top: 0;
   left: 0;
-  z-index: -99;
 }
 
 #Contact .contact-container {
@@ -591,19 +622,23 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-56%, -40%);
           transform: translate(-56%, -40%);
-  width: 1000px;
+  width: 70%;
 }
 
 #Contact .contact-container .imageContainer img {
-  height: 400px;
-  width: 400px;
-  -webkit-clip-path: circle(200px);
-          clip-path: circle(200px);
+  height: 40rem;
+  width: 40rem;
+  -webkit-clip-path: circle(20rem);
+          clip-path: circle(20rem);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -612,47 +647,47 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #Contact .contact-container .contact-detail h1 {
   font-family: Poppins;
-  font-size: 45px;
+  font-size: 4.5rem;
 }
 
 #Contact .contact-container .contact-detail h3 {
   font-family: calibri;
-  margin: 0px;
-  padding: 0px;
-  font-size: 30px;
+  margin: 0rem;
+  padding: 0rem;
+  font-size: 3rem;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.904);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 #Contact .contact-container .contact-detail p {
   font-family: sans-serif;
-  font-size: 20px;
-  margin: 5px 0px 20px 0px;
+  font-size: 2rem;
+  margin: 0.5rem 0rem 2rem 0rem;
   color: #4b4949;
 }
 
 #Contact .contact-container .contact-detail #get-in-touch {
   background-color: #bc1823;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   border: none;
-  border-radius: 30px;
-  font-size: 18px;
+  border-radius: 3rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -664,11 +699,12 @@ ul {
 
 /* Contact Form */
 #contact-form {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: relative;
   width: 100%;
   height: 100vh;
-  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3rem 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,23 +718,22 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px 50px;
 }
 
 #contact-form h1 {
   width: 50%;
   height: 10%;
-  margin: 0px;
-  padding-top: 35px;
+  margin: 0rem;
+  padding-top: 3.5rem;
   text-align: center;
   background-color: #bc1823;
   color: #fff;
   font-family: Poppins;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   font-weight: 600;
-  border-radius: 30px 30px 0px 0px;
-  -webkit-box-shadow: 5px 0px 6px -1px rgba(0, 0, 0, 0.5), -5px 0px 6px -1px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 0px 6px -1px rgba(0, 0, 0, 0.5), -5px 0px 6px -1px rgba(0, 0, 0, 0.5);
+  border-radius: 3rem 3rem 0rem 0rem;
+  -webkit-box-shadow: 0.5rem 0rem 0.6rem -0.1rem rgba(0, 0, 0, 0.5), -0.5rem 0rem 0.6rem -0.1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.5rem 0rem 0.6rem -0.1rem rgba(0, 0, 0, 0.5), -0.5rem 0rem 0.6rem -0.1rem rgba(0, 0, 0, 0.5);
 }
 
 #contact-form form {
@@ -717,89 +752,100 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 0px 0px 30px 30px;
-  -webkit-box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.5), -5px 5px 8px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.5), -5px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 0rem 0rem 3rem 3rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 0.8rem 0rem rgba(0, 0, 0, 0.5), -0.5rem 0.5rem 0.8rem 0rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.5rem 0.5rem 0.8rem 0rem rgba(0, 0, 0, 0.5), -0.5rem 0.5rem 0.8rem 0rem rgba(0, 0, 0, 0.5);
+}
+
+#contact-form form .name-email {
+  width: 100%;
+  height: 25%;
 }
 
 #contact-form form .name-email input {
-  width: 250px;
-  height: 30px;
-  margin: 0px 10px 0px;
+  width: 45%;
+  height: 50%;
+  margin: 0% 2%;
   border: none;
-  border-bottom: 2px solid grey;
+  border-bottom: 0.2rem solid grey;
   background-color: transparent;
   outline: none;
 }
 
 #contact-form form .name-email input:focus {
-  border-bottom: 2px solid red;
+  border-bottom: 0.2rem solid red;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 #contact-form form .name-email input::-webkit-input-placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 #contact-form form .name-email input:-ms-input-placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 #contact-form form .name-email input::-ms-input-placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 #contact-form form .name-email input::placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+}
+
+#contact-form form .visitorMessage {
+  width: 100%;
+  height: 20%;
 }
 
 #contact-form form .visitorMessage input {
-  width: 530px;
-  height: 30px;
+  width: 95%;
+  height: 100%;
   border: none;
-  border-bottom: 2px solid grey;
+  margin: 0% 2%;
+  border-bottom: 0.2rem solid grey;
   background-color: transparent;
   outline: none;
 }
 
 #contact-form form .visitorMessage input::-webkit-input-placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 #contact-form form .visitorMessage input:-ms-input-placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 #contact-form form .visitorMessage input::-ms-input-placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 #contact-form form .visitorMessage input::placeholder {
   opacity: 0.75;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
 }
 
 #contact-form form .visitorMessage input:focus {
-  border-bottom: 2px solid red;
+  border-bottom: 0.2rem solid red;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 #contact-form form #submit-btn {
-  padding: 10px 35px;
+  padding: 1rem 3.5rem;
   background-color: #bc1823;
   color: #fff;
   border: none;
-  border-radius: 30px;
-  font-size: 18px;
+  border-radius: 3rem;
+  font-size: 1.8rem;
   font-family: calibri;
   font-weight: bold;
 }
@@ -827,29 +873,182 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 #contact-form .red-footer .copyright {
-  padding: 10px 20px;
-  font-size: 20px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
   color: #fff;
   font-weight: bold;
 }
 
 #contact-form .red-footer .social {
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 150px;
+  width: 15rem;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
 #contact-form .red-footer .social img {
-  width: 32px;
-  height: 32px;
+  width: 3.2rem;
+  height: 3.2rem;
   cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 1175px) {
+  #contact-form form {
+    height: 50%;
+  }
+  #contact-form form .name-email input {
+    width: 95%;
+    margin: 1% 2%;
+  }
+}
+
+@media (max-width: 1100px) {
+  #About .imageContainer {
+    width: 45rem;
+    height: 35rem;
+  }
+  #About .aboutDesc .title {
+    font-size: 4rem;
+  }
+  #About .aboutDesc .description {
+    font-size: 2.5rem;
+  }
+  #Products .productImageContainer .imageBox {
+    width: 25rem;
+    height: 30rem;
+    top: 15%;
+  }
+  #Products .productImageContainer .imageBox:hover {
+    -webkit-transform: translate(0rem, -2rem);
+            transform: translate(0rem, -2rem);
+  }
+  #Products .bottom-red-box {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    background-color: #bc1823;
+    z-index: -99;
+  }
+  #Chefs .headerTitle {
+    font-size: 4rem;
+    margin-top: 10rem;
+    margin-bottom: 0rem;
+    padding: 0rem;
+  }
+  #Chefs .upper-red-box {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    background-color: #bc1823;
+    z-index: -99;
+    border-top: 0.2rem solid #efefef;
+  }
+  #Chefs .cardContainer {
+    padding-top: 10%;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #About {
+    height: auto;
+    width: 100%;
+  }
+  #About .imageContainer {
+    width: 30%;
+    width: 40rem;
+    height: 25rem;
+  }
+  #About .aboutDesc {
+    width: 70%;
+    margin-left: 3rem;
+  }
+  #About .aboutDesc .title {
+    font-size: 3.5rem;
+  }
+  #About .aboutDesc .description {
+    font-size: 2rem;
+  }
+  #About .aboutDesc #learnMoreId {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1rem 20rem 0rem 0rem;
+  }
+  #Products {
+    height: auto;
+    width: 100%;
+  }
+  #Products .productImageContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #Products .productImageContainer .imageBox {
+    margin: 3rem;
+    width: 20rem;
+    height: 25rem;
+  }
+  #Products .bottom-red-box {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    background-color: #bc1823;
+    z-index: -99;
+  }
+  #Chefs {
+    height: auto;
+    width: 100%;
+  }
+  #Chefs .headerTitle {
+    padding: 2rem;
+  }
+  #Chefs .upper-red-box {
+    position: absolute;
+    width: 100%;
+    height: 25vh;
+    background-color: #bc1823;
+    z-index: -99;
+    border-top: 0.2rem solid #efefef;
+  }
+  #Chefs .cardContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #Chefs .cardContainer .card {
+    margin-top: 2rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

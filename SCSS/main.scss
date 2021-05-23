@@ -1,23 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,900;1,400&display=swap");
 
-@mixin flexProp {
+@mixin flexProp($flexDir, $justify, $align: center) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flexDir;
+}
+
+@mixin sectionDefault {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 3rem 5rem;
+}
+
+@mixin red-box($height, $width) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: #bc1823;
+    z-index: -99;
 }
 
 @mixin border {
-    border: 1px solid black;
+    border: 0.1rem solid black;
 }
 
 @mixin bigButton {
     background-color: #bc1823;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     border: none;
-    border-radius: 30px;
-    font-size: 18px;
+    border-radius: 3rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: white;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -37,7 +54,7 @@
 
 @keyframes slide-up {
     0% {
-        transform: translateY(250px);
+        transform: translateY(250rem);
     }
     100% {
         top: 30;
@@ -48,6 +65,10 @@
     100% {
         transform: translateY(100%);
     }
+}
+
+html {
+    font-size: 62.5%; //10rem
 }
 
 body {
@@ -67,22 +88,12 @@ ul {
 /* Home Section */
 
 #Home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    padding: 30px 50px;
-
+    @include sectionDefault();
     /* Right Red Box Design */
-
     .right-red-box {
-        position: absolute;
         top: 0;
         right: 0;
-        width: 25vw;
-        height: 100vh;
-        background-color: #bc1823;
-        z-index: -99;
+        @include red-box(100vh, 25vw);
     }
 
     /* Nav Bar Design */
@@ -92,27 +103,30 @@ ul {
         top: 0;
         left: 0;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexProp(row, space-between);
         box-sizing: border-box;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 0.2rem;
         background-color: #efefef;
         z-index: 1;
-        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0rem 0rem 1.2rem 0rem rgba(0, 0, 0, 0.5);
 
         /* Name Of Page */
 
         .logoContainer {
             font-family: Poppins;
-            padding: 0px 20px;
+            padding: 0rem 2rem;
             color: #bc1823;
-            font-size: 20px;
+            font-size: 2rem;
         }
+
+        .toggle {
+            display: none;
+        }
+
         ul {
             display: flex;
-            padding: 0px 10px;
+            padding: 0rem 1rem;
 
             li {
                 .active {
@@ -121,10 +135,10 @@ ul {
                     font-weight: 650;
                 }
                 a {
-                    padding: 10px 15px;
-                    font-size: 16px;
+                    padding: 1rem 1.5rem;
+                    font-size: 1.6rem;
                     font-family: calibri;
-                    margin: 0px 2px;
+                    margin: 0rem 0.2rem;
                     color: #000;
                     font-weight: 600;
                 }
@@ -141,9 +155,7 @@ ul {
 
     .homeCase {
         @include page-slide-up();
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flexProp(row, space-around);
         position: relative;
         top: 50%;
         transform: translateY(-40%);
@@ -152,23 +164,23 @@ ul {
             flex-direction: column;
 
             .sunContainer {
-                margin-bottom: 30px;
+                margin-bottom: 3rem;
             }
             .showText {
                 font-family: Poppins;
-                font-size: 70px;
+                font-size: 7rem;
                 font-weight: 600;
                 margin: 0;
                 padding: 0;
-                line-height: 65px;
+                line-height: 6.5rem;
                 .showMainText {
                     margin: 0;
                     padding: 0;
                 }
             }
             .describeHome {
-                font-size: 1.5rem;
-                margin: 15px 0px;
+                font-size: 2.5rem;
+                margin: 1.5rem 0rem;
                 font-weight: 100;
                 color: rgb(75, 73, 73);
             }
@@ -177,7 +189,7 @@ ul {
 
             #viewMoreId {
                 @include bigButton;
-                margin: 20px 200px 0px 0px;
+                margin: 2rem 20rem 0rem 0rem;
             }
             #viewMoreId:hover {
                 background-color: red;
@@ -188,14 +200,14 @@ ul {
         /* Image with Round Container */
 
         .model_image {
-            height: 400px;
-            width: 400px;
+            height: 40rem;
+            width: 40rem;
             background-color: #000000;
-            clip-path: circle(200px);
+            clip-path: circle(20rem);
             img {
-                height: 400px;
-                width: 400px;
-                clip-path: circle(197px);
+                height: 40rem;
+                width: 40rem;
+                clip-path: circle(19.7rem);
                 object-fit: fill;
             }
         }
@@ -205,43 +217,35 @@ ul {
 /* About Section Design */
 
 #About {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 30px 50px;
+    @include sectionDefault();
+    @include flexProp(row, space-evenly);
     .imageContainer {
-        width: 550px;
-        height: 450px;
+        width: 55rem;
+        height: 45rem;
         img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
         }
     }
     .aboutDesc {
-        display: flex;
-        width: 600px;
-        flex-direction: column;
-        align-items: left;
+        width: 60rem;
+        @include flexProp(column, flex-start, left);
         .title {
             font-family: Poppins;
-            font-size: 45px;
-            padding: 0px;
-            margin: 0px;
+            font-size: 4.5rem;
+            padding: 0rem;
+            margin: 0rem;
         }
         .description {
-            font-size: 30px;
+            font-size: 3rem;
             font-family: calibri;
-            padding: 10px 0px;
-            margin: 0px;
+            padding: 1rem 0rem;
+            margin: 0rem;
             color: #4b4949;
         }
         #learnMoreId {
             @include bigButton;
-            margin: 40px 60% 0px 0px;
+            margin: 4rem 35rem 0rem 0rem;
         }
         #learnMoreId:hover {
             background-color: red;
@@ -253,25 +257,18 @@ ul {
 /* Products Section */
 
 #Products {
-    width: 100%;
-    height: 100vh;
-    padding: 30px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    box-sizing: border-box;
+    @include sectionDefault();
+    @include flexProp(column, center);
     .textContainer {
         .title {
             font-family: Poppins;
-            font-size: 45px;
+            font-size: 4.5rem;
             margin: 0;
             padding: 0;
             text-align: center;
         }
         .description {
-            font-size: 30px;
+            font-size: 3rem;
             font-family: calibri;
             padding: 0;
             margin: 0;
@@ -280,27 +277,24 @@ ul {
     }
     .productImageContainer {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+        @include flexProp(row, space-evenly);
         .imageBox {
             cursor: pointer;
             position: relative;
             top: 10%;
-            width: 300px;
-            height: 350px;
+            width: 30rem;
+            height: 35rem;
             background-color: #fff;
-            border-radius: 30px;
-            box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.3);
-            transform: translate(0px, 30px);
+            border-radius: 3rem;
+            box-shadow: 0.2rem 0.2rem 1.2rem 0.2rem rgba(0, 0, 0, 0.3);
+            transform: translate(0rem, 3rem);
             transition: all 0.5s ease;
             .heart-shape {
                 position: absolute;
-                top: 25px;
-                left: 25px;
-                height: 32px;
-                width: 32px;
+                top: 2.5rem;
+                left: 2.5rem;
+                height: 3.2rem;
+                width: 3.2rem;
                 img {
                     width: 100%;
                     height: 100%;
@@ -312,20 +306,17 @@ ul {
                 object-fit: fill;
             }
             .afterImage {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                @include flexProp(column, center);
                 .imageName {
-                    margin: 0px 0px 15px 0px;
-                    padding: 0px;
+                    margin: 0rem 0rem 1.5rem 0rem;
+                    padding: 0rem;
                     font-family: Poppins;
-                    font-size: 18px;
+                    font-size: 1.8rem;
                 }
                 .downArrow {
                     box-sizing: border-box;
-                    width: 16px;
-                    height: 8px;
+                    width: 1.6rem;
+                    height: 0.8rem;
                     background-color: black;
                     clip-path: polygon(
                         0% 0%,
@@ -339,7 +330,7 @@ ul {
             }
         }
         .imageBox:hover {
-            transform: translate(0px, -30px);
+            transform: translate(0rem, -3rem);
             transition: transform 0.5s ease;
 
             .downArrow {
@@ -349,65 +340,46 @@ ul {
         }
     }
     .bottom-red-box {
-        background-color: #bc1823;
-        height: 35vh;
-        width: 100%;
-        position: absolute;
+        @include red-box(35vh, 100%);
         bottom: 0;
         left: 0;
-        z-index: -99;
     }
 }
 
 /* Chef Section */
 
 #Chefs {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 50px;
+    @include sectionDefault();
+    @include flexProp(column, center);
+
     .headerTitle {
         font-family: Poppins;
-        font-size: 45px;
+        font-size: 4.5rem;
         color: #fff;
-        padding-top: 40px;
+        padding-top: 4rem;
     }
     .upper-red-box {
-        background-color: #bc1823;
-        height: 45vh;
-        width: 100%;
-        position: absolute;
+        @include red-box(45vh, 100%);
         top: 0;
         left: 0;
-        z-index: -99;
     }
     .cardContainer {
-        padding-top: 5%;
-        display: flex;
-        align-items: center;
+        padding-top: 7%;
+        @include flexProp(row, flex-start);
         .card {
-            margin: 0px 20px;
-            display: flex;
-            height: 400px;
-            width: 400px;
-            flex-direction: column;
-            align-items: center;
+            @include flexProp(column, center);
+            margin: 0rem 2rem;
             .chefImage {
-                width: 150px;
-                height: 150px;
+                width: 15rem;
+                height: 15rem;
                 border-radius: 100%;
-                box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+                box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.5);
                 img {
                     margin: 0;
                     padding: 0;
-                    width: 150px;
-                    height: 150px;
-                    clip-path: circle(75px);
+                    width: 15rem;
+                    height: 15rem;
+                    clip-path: circle(7.5rem);
                     object-fit: cover;
                 }
             }
@@ -415,11 +387,11 @@ ul {
                 text-align: center;
                 .title {
                     font-family: Poppins;
-                    font-size: 30px;
+                    font-size: 3rem;
                 }
                 .description {
                     font-family: calibri;
-                    font-size: 20px;
+                    font-size: 2rem;
                     color: #4b4949;
                 }
             }
@@ -430,58 +402,45 @@ ul {
 /* Contact Design */
 
 #Contact {
-    position: relative;
-    box-sizing: border-box;
-    padding: 30px 50px;
-    width: 100%;
-    height: 100vh;
+    @include sectionDefault();
     .left-red-box {
-        background-color: #bc1823;
-        height: 100%;
-        width: 30vw;
-        position: absolute;
+        @include red-box(100%, 30vw);
         top: 0;
         left: 0;
-        z-index: -99;
     }
     .contact-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flexProp(row, space-around);
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-56%, -40%);
-        width: 1000px;
+        width: 70%;
         .imageContainer {
             img {
-                height: 400px;
-                width: 400px;
-                clip-path: circle(200px);
+                height: 40rem;
+                width: 40rem;
+                clip-path: circle(20rem);
                 object-fit: cover;
             }
         }
         .contact-detail {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flexProp(column, center);
             h1 {
                 font-family: Poppins;
-                font-size: 45px;
+                font-size: 4.5rem;
             }
             h3 {
                 font-family: calibri;
-                margin: 0px;
-                padding: 0px;
-                font-size: 30px;
+                margin: 0rem;
+                padding: 0rem;
+                font-size: 3rem;
                 font-weight: 600;
-                color: rgba(0, 0, 0, 0.904);
+                color: rgba(0, 0, 0, 0.9);
             }
             p {
                 font-family: sans-serif;
-                font-size: 20px;
-                margin: 5px 0px 20px 0px;
+                font-size: 2rem;
+                margin: 0.5rem 0rem 2rem 0rem;
                 color: #4b4949;
             }
             #get-in-touch {
@@ -498,84 +457,79 @@ ul {
 /* Contact Form */
 
 #contact-form {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 50px;
+    @include sectionDefault();
+    @include flexProp(column, center);
     h1 {
         width: 50%;
         height: 10%;
-        margin: 0px;
-        padding-top: 35px;
+        margin: 0rem;
+        padding-top: 3.5rem;
         text-align: center;
         background-color: #bc1823;
         color: #fff;
         font-family: Poppins;
-        letter-spacing: 1px;
+        letter-spacing: 0.1rem;
         font-weight: 600;
-        border-radius: 30px 30px 0px 0px;
-        box-shadow: 5px 0px 6px -1px rgba(0, 0, 0, 0.5),
-            -5px 0px 6px -1px rgba(0, 0, 0, 0.5);
+        border-radius: 3rem 3rem 0rem 0rem;
+        box-shadow: 0.5rem 0rem 0.6rem -0.1rem rgba(0, 0, 0, 0.5),
+            -0.5rem 0rem 0.6rem -0.1rem rgba(0, 0, 0, 0.5);
     }
     form {
         height: 40%;
         width: 50%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 0px 0px 30px 30px;
-        box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.5),
-            -5px 5px 8px 0px rgba(0, 0, 0, 0.5);
+        @include flexProp(column, space-evenly);
+        border-radius: 0rem 0rem 3rem 3rem;
+        box-shadow: 0.5rem 0.5rem 0.8rem 0rem rgba(0, 0, 0, 0.5),
+            -0.5rem 0.5rem 0.8rem 0rem rgba(0, 0, 0, 0.5);
         .name-email {
+            width: 100%;
+            height: 25%;
             input {
-                width: 250px;
-                height: 30px;
-                margin: 0px 10px 0px;
+                width: 45%;
+                height: 50%;
+                margin: 0% 2%;
                 border: none;
-                border-bottom: 2px solid grey;
+                border-bottom: 0.2rem solid grey;
                 background-color: transparent;
                 outline: none;
             }
             input:focus {
-                border-bottom: 2px solid red;
+                border-bottom: 0.2rem solid red;
                 transition: all 0.3s ease;
             }
             input::placeholder {
                 opacity: 0.75;
-                letter-spacing: 1px;
+                letter-spacing: 0.1rem;
             }
         }
         .visitorMessage {
+            width: 100%;
+            height: 20%;
             input {
-                width: 530px;
-                height: 30px;
+                width: 95%;
+                height: 100%;
                 border: none;
-                border-bottom: 2px solid grey;
+                margin: 0% 2%;
+                border-bottom: 0.2rem solid grey;
                 background-color: transparent;
                 outline: none;
             }
             input::placeholder {
                 opacity: 0.75;
-                letter-spacing: 1px;
+                letter-spacing: 0.1rem;
             }
             input:focus {
-                border-bottom: 2px solid red;
+                border-bottom: 0.2rem solid red;
                 transition: all 0.3s ease;
             }
         }
         #submit-btn {
-            padding: 10px 35px;
+            padding: 1rem 3.5rem;
             background-color: #bc1823;
             color: #fff;
             border: none;
-            border-radius: 30px;
-            font-size: 18px;
+            border-radius: 3rem;
+            font-size: 1.8rem;
             font-family: calibri;
             font-weight: bold;
         }
@@ -592,24 +546,151 @@ ul {
         position: absolute;
         bottom: 0;
         left: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexProp(row, space-between);
         .copyright {
-            padding: 10px 20px;
-            font-size: 20px;
+            padding: 1rem 2rem;
+            font-size: 2rem;
             color: #fff;
             font-weight: bold;
         }
         .social {
-            padding: 10px 20px;
+            padding: 1rem 2rem;
             display: flex;
-            width: 150px;
+            width: 15rem;
             justify-content: space-evenly;
             img {
-                width: 32px;
-                height: 32px;
+                width: 3.2rem;
+                height: 3.2rem;
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Media Query */
+
+@media (max-width: 1175px) {
+    #contact-form {
+        form {
+            height: 50%;
+            .name-email {
+                input {
+                    width: 95%;
+                    margin: 1% 2%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    #About {
+        .imageContainer {
+            width: 45rem;
+            height: 35rem;
+        }
+        .aboutDesc {
+            .title {
+                font-size: 4rem;
+            }
+            .description {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    #Products {
+        .productImageContainer {
+            .imageBox {
+                width: 25rem;
+                height: 30rem;
+                top: 15%;
+            }
+            .imageBox:hover {
+                transform: translate(0rem, -2rem);
+            }
+        }
+        .bottom-red-box {
+            @include red-box(25vh, 100%);
+        }
+    }
+
+    #Chefs {
+        .headerTitle {
+            font-size: 4rem;
+            margin-top: 10rem;
+            margin-bottom: 0rem;
+            padding: 0rem;
+        }
+        .upper-red-box {
+            @include red-box(25vh, 100%);
+            border-top: 0.2rem solid #efefef;
+        }
+        .cardContainer {
+            padding-top: 10%;
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #About {
+        height: auto;
+        width: 100%;
+        .imageContainer {
+            width: 30%;
+
+            width: 40rem;
+            height: 25rem;
+        }
+        .aboutDesc {
+            width: 70%;
+
+            margin-left: 3rem;
+            .title {
+                font-size: 3.5rem;
+            }
+            .description {
+                font-size: 2rem;
+            }
+            #learnMoreId {
+                font-size: 1.8rem;
+                font-weight: bold;
+                margin: 1rem 20rem 0rem 0rem;
+            }
+        }
+    }
+
+    #Products {
+        height: auto;
+        width: 100%;
+        .productImageContainer {
+            @include flexProp(row, center);
+            .imageBox {
+                margin: 3rem;
+                width: 20rem;
+                height: 25rem;
+            }
+        }
+        .bottom-red-box {
+            @include red-box(25vh, 100%);
+        }
+    }
+
+    #Chefs {
+        height: auto;
+        width: 100%;
+        .headerTitle {
+            padding: 2rem;
+        }
+        .upper-red-box {
+            @include red-box(25vh, 100%);
+            border-top: 0.2rem solid #efefef;
+        }
+        .cardContainer {
+            @include flexProp(column, center);
+            .card {
+                margin-top: 2rem;
             }
         }
     }
