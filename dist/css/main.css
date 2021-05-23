@@ -638,7 +638,7 @@ ul {
   left: 50%;
   -webkit-transform: translate(-60%, -50%);
           transform: translate(-60%, -50%);
-  width: 70%;
+  width: 80%;
 }
 
 #Contact .contact-container .imageContainer img {
@@ -728,7 +728,7 @@ ul {
 }
 
 #contact-form h1 {
-  width: 50%;
+  width: 60%;
   height: 10%;
   margin: 0rem;
   padding-top: 3.5rem;
@@ -745,7 +745,7 @@ ul {
 
 #contact-form form {
   height: 40%;
-  width: 50%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,6 +1019,7 @@ ul {
     font-weight: 400;
   }
   #Home .homeCase .caption #viewMoreId {
+    padding: 1rem 2rem;
     margin: 2rem 15rem 0rem 0rem;
   }
   #Home .homeCase .model_image {
@@ -1039,7 +1040,6 @@ ul {
     width: 100%;
   }
   #About .imageContainer {
-    width: 30%;
     width: 40rem;
     height: 25rem;
   }
@@ -1057,6 +1057,7 @@ ul {
   #About .aboutDesc #learnMoreId {
     font-size: 1.8rem;
     font-weight: bold;
+    padding: 1rem 2rem;
     margin: 1rem 20rem 0rem 0rem;
   }
   #Products {
@@ -1142,6 +1143,259 @@ ul {
   #Contact .contact-container .contact-detail p {
     font-size: 1.5rem;
     font-weight: 500;
+  }
+  #Contact .contact-container .contact-detail #get-in-touch {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #Products .productImageContainer .imageBox {
+    width: 40rem;
+    height: 25rem;
+    margin: 3rem 1rem;
+  }
+  #Chefs .headerTitle {
+    margin: 1rem 0rem 5rem 0rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #Home nav {
+    height: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #Home nav .logoContainer {
+    font-size: 2rem;
+  }
+  #Home nav ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #Home .homeCase .caption #viewMoreId {
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 0.75rem 2rem;
+    margin: 2rem 5rem 0rem 0rem;
+  }
+  #About .aboutDesc {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #About .aboutDesc .description {
+    text-align: center;
+  }
+  #About .aboutDesc #learnMoreId {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding: 0.75rem 2rem;
+  }
+  #Products .textContainer .title {
+    font-size: 3.5rem;
+  }
+  #Products .textContainer .description {
+    font-size: 2.5rem;
+  }
+  #Products .productImageContainer .imageBox {
+    top: 10%;
+    margin: 0rem 0.5rem;
+  }
+  #Contact .contact-detail #get-in-touch {
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding: 0.75rem 2rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #Home .homeCase .caption .sunContainer {
+    height: 4rem;
+    width: 4rem;
+  }
+  #Home .homeCase .caption .showText {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  #Home .homeCase .caption .describeHome {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  #Home .homeCase .caption #viewMoreId {
+    margin: 2rem 0rem 0rem 0rem;
+  }
+  #Home .homeCase .model_image {
+    height: 25rem;
+    width: 25rem;
+    -webkit-clip-path: circle(12.5rem);
+            clip-path: circle(12.5rem);
+  }
+  #Home .homeCase .model_image img {
+    height: 25rem;
+    width: 25rem;
+    -webkit-clip-path: circle(12.3rem);
+            clip-path: circle(12.3rem);
+  }
+  #About {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #About .imageContainer {
+    width: 90%;
+    height: 25rem;
+  }
+  #About .imageContainer img {
+    width: 100%;
+  }
+  #About .aboutDesc {
+    width: 80%;
+  }
+  #About .aboutDesc .title {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  #About .aboutDesc .description {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  #About .aboutDesc #learnMoreId {
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 1rem 2rem;
+  }
+  #Products {
+    height: auto;
+  }
+  #Products .productImageContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #Products .productImageContainer .imageBox {
+    margin: 3rem;
+  }
+  #Products .textContainer .title {
+    font-size: 3rem;
+  }
+  #Products .textContainer .description {
+    font-size: 2rem;
+  }
+  #Chefs .headerTitle {
+    font-size: 3rem;
+    margin: 5rem 0rem 5rem 0rem;
+  }
+  #Contact .contact-container .imageContainer img {
+    height: 20rem;
+    width: 20rem;
+    -webkit-clip-path: circle(10rem);
+            clip-path: circle(10rem);
+  }
+  #Contact .contact-container .contact-detail h1 {
+    font-size: 2.3rem;
+  }
+  #Contact .contact-container .contact-detail h3 {
+    font-size: 2rem;
+  }
+  #Contact .contact-container .contact-detail #get-in-touch {
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 500px) {
+  #contact-form h1 {
+    width: 100%;
+  }
+  #contact-form form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  #Home nav {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #Home nav .toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+  }
+  #Home nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=main.css.map */
