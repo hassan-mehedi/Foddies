@@ -825,9 +825,7 @@ ul {
         nav {
             height: 20vh;
             @include flexProp(column, center, center);
-            .logoContainer {
-                font-size: 2rem;
-            }
+
             ul {
                 width: 100%;
                 @include flexProp(row, center, center);
@@ -1013,15 +1011,35 @@ ul {
     #Home {
         nav {
             height: auto;
-            @include flexProp(column, space-between, center);
+            @include flexProp(column, space-between, flex-start);
             .toggle {
                 display: block;
                 position: absolute;
                 right: 1rem;
-                top: 3rem;
+                top: 2.5rem;
+            }
+            .logoContainer {
+                font-size: 1.5rem;
             }
             ul {
-                @include flexProp(column, flex-start);
+                @include flexProp(column, center);
+                li {
+                    padding: 1rem;
+                    margin: 0.25rem;
+                    a {
+                        border: none;
+                    }
+                }
+            }
+            .menu {
+                display: none;
+            }
+            .menu.active-menu {
+                display: flex;
+            }
+
+            .toggle.rotate {
+                transform: rotate(90deg);
             }
         }
     }

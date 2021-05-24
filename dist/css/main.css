@@ -1177,9 +1177,6 @@ ul {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #Home nav .logoContainer {
-    font-size: 2rem;
-  }
   #Home nav ul {
     width: 100%;
     display: -webkit-box;
@@ -1368,9 +1365,9 @@ ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1380,15 +1377,18 @@ ul {
     display: block;
     position: absolute;
     right: 1rem;
-    top: 3rem;
+    top: 2.5rem;
+  }
+  #Home nav .logoContainer {
+    font-size: 1.5rem;
   }
   #Home nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1396,6 +1396,25 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #Home nav ul li {
+    padding: 1rem;
+    margin: 0.25rem;
+  }
+  #Home nav ul li a {
+    border: none;
+  }
+  #Home nav .menu {
+    display: none;
+  }
+  #Home nav .menu.active-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #Home nav .toggle.rotate {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
